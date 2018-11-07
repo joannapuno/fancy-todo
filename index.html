@@ -21,6 +21,9 @@
                         <button class="main-btn" type="submit" name="button">Add</button>
                     </form>
                 </div>
+                <div id="message-box" class="message-box">
+                        <p class="message-text">{{ message }}</p>
+                </div>
             </div>
 
             <div class="list-container">
@@ -36,12 +39,62 @@
                 <div class="alldone-btn">
                         <button @click="allDone" type="button" name="button" class="main-btn" >All Done</button>
                 </div> 
-                <div id="message-box">
-                        <p>{{ message }}</p>
-                </div>
             </div>   
         </div>
     </main>
+
+    <div class="background-graphic">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1845.187 429.057">
+            <defs>
+              <style>
+                .cls-1, .cls-3 {
+                  fill: none;
+                }
+          
+                .cls-1 {
+                  stroke: #fff;
+                }
+          
+                .cls-2 {
+                  stroke: none;
+                }
+              </style>
+            </defs>
+            <g id="Group_2" data-name="Group 2" transform="translate(-35.269 -603)">
+              <path id="Path_1" data-name="Path 1" class="cls-1" d="M49.477,1063.7,257.634,803.133l167.073,197.152Z" transform="translate(-13 -61)"/>
+              <g id="Ellipse_1" data-name="Ellipse 1" class="cls-1" transform="translate(97 603)">
+                <circle class="cls-2" cx="58" cy="58" r="58"/>
+                <circle class="cls-3" cx="58" cy="58" r="57.5"/>
+              </g>
+              <g id="Ellipse_2" data-name="Ellipse 2" class="cls-1" transform="translate(844 794)">
+                <circle class="cls-2" cx="58" cy="58" r="58"/>
+                <circle class="cls-3" cx="58" cy="58" r="57.5"/>
+              </g>
+              <g id="Ellipse_3" data-name="Ellipse 3" class="cls-1" transform="translate(1672 852)">
+                <circle class="cls-2" cx="58" cy="58" r="58"/>
+                <circle class="cls-3" cx="58" cy="58" r="57.5"/>
+              </g>
+              <path id="Path_2" data-name="Path 2" class="cls-1" d="M499.571,866.847l24.738-29.036,25.055,29.036Z"/>
+              <path id="Path_8" data-name="Path 8" class="cls-1" d="M499.571,866.847l24.738-29.036,25.055,29.036Z" transform="translate(1330 -44)"/>
+              <path id="Path_9" data-name="Path 9" class="cls-1" d="M499.571,866.847l24.738-29.036,25.055,29.036Z" transform="translate(1330 20)"/>
+              <path id="Path_7" data-name="Path 7" class="cls-1" d="M499.571,866.847l24.738-29.036,25.055,29.036Z" transform="translate(-138 148)"/>
+              <path id="Path_5" data-name="Path 5" class="cls-1" d="M499.571,866.847l24.738-29.036,25.055,29.036Z" transform="translate(1072 58)"/>
+              <path id="Path_4" data-name="Path 4" class="cls-1" d="M499.571,866.847l24.738-29.036,25.055,29.036Z" transform="translate(478 148)"/>
+              <g id="Rectangle_4" data-name="Rectangle 4" class="cls-1" transform="translate(336 661)">
+                <rect class="cls-2" width="46" height="116"/>
+                <rect class="cls-3" x="0.5" y="0.5" width="45" height="115"/>
+              </g>
+              <g id="Rectangle_5" data-name="Rectangle 5" class="cls-1" transform="translate(1145 916)">
+                <rect class="cls-2" width="46" height="116"/>
+                <rect class="cls-3" x="0.5" y="0.5" width="45" height="115"/>
+              </g>
+              <path id="Path_3" data-name="Path 3" class="cls-1" d="M568.9,991l161.243-50.621,208.776,91.18Z"/>
+              <path id="Path_10" data-name="Path 10" class="cls-1" d="M568.9,978.441l121.24-38.062,156.981,68.559Z" transform="translate(859.798 17.621)"/>
+              <path id="Path_6" data-name="Path 6" class="cls-1" d="M1370.557,910l-105.59,117h74.964Z"/>
+            </g>
+          </svg>
+          
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

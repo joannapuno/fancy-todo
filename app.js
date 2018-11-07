@@ -13,7 +13,6 @@ const app = new Vue({
     },
     methods: {
         addTodo() {
-            // console.log(this.newTodo); //'this' refers to the instance. So if you want to access the properties inside 'this', you do DOT notation
             this.todos.push({
                 title:this.newTodo,
                 done:false
@@ -22,15 +21,13 @@ const app = new Vue({
         },
         removeTodo(todo) {
             const todoIndex = this.todos.indexOf(todo);
-            this.todos.splice(todoIndex, 1); //Remove 1 from array
-            this.message = 'Good job!';
-
-            
+            this.todos.splice(todoIndex, 1); //Remove 1 from array    
         },
 
         allDone() {
             this.todos.forEach(todo => {
                 todo.done = true;
+                this.message = 'Nice! You\'ve got everything done!'; 
             });
         }
     }
