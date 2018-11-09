@@ -16,14 +16,15 @@
             <div class="input-container d-flex flex-column">
                 <h1>{{ title }}</h1>
                 <div class="input-content d-flex flex-column ">
-                    <form @submit.prevent = "addTodo">
+                    <form id="addForm" @submit.prevent = "addTodo">
                         <!-- <label for="newTodo">New Todo</label> -->
                         <input v-model="newTodo" type="text" name="newTodo" id="newTodo" class="todo-input" placeholder="I need to...">
-                        <button class="main-btn" type="submit" name="button">Add</button>
+                        <button @click="checkForm" id="addBtn" class="main-btn" type="submit" name="button">Add</button>
                     </form>
                 </div>
                 <div id="message-box" class="message-box">
-                        <p class="message-text">{{ message }}</p>
+                        <p class="message-text">{{ message }}</p>       
+                        <p class="message-text">{{ errorMessage }} </p>                      
                 </div>
             </div>
 
@@ -32,7 +33,7 @@
                                    
                     <ul v-if = "todos.length">
                         <li v-for="todo in todos" >
-                            <input type="checkbox" v-model="todo.done">
+                            <input type="checkbox" v-model="todo.done" id="todo">
                             <span :class="{ done: todo.done }">{{ todo.title }}</span>
                             <button @click="removeTodo(todo)" type="button" class="remove-btn" >Remove</button>
                         </li> 

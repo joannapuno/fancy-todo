@@ -8,7 +8,9 @@ const app = new Vue({
         message: '',
         newTodo:'',
         todos: [],
-        noNote: true,
+        errors:[],
+        errorMessage: '',
+       
     },
     methods: {
         addTodo() {
@@ -28,10 +30,50 @@ const app = new Vue({
                 todo.done = true;
                 this.message = 'Nice! You\'ve got everything done!'; 
             });
-        }
+        },
+
+        checkForm: function (e) {
+            if (this.newTodo === '') {
+                this.errorMessage = 'Oops! You forgot to add a task!';  
+            }
+
+            else {
+                this.addTodo();
+            }
+      
+            e.preventDefault();
+          }
+
     }
 })
 
+
+
+// $(document).ready(function() {
+//     $('#error').hide();
+//     $('#addBtn').on('click',function(event){
+//         event.preventDefault();
+//         console.log('hey');
+
+//         var invalid = false;
+//         $('#addForm input').each(function(){
+    
+//             if($(this).val() === '') {
+//                 invalid = true;
+//             }
+//         });
+    
+//         if(invalid) {
+//             $('#error').fadeIn(500);
+            
+//         }
+//         if(!invalid) {
+//             $('#error').hide();
+            
+//         }
+//       });
+        
+//     });
 
 
 
