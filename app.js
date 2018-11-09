@@ -1,6 +1,3 @@
-// el means element
-//data is anything you want to show on your page!
-
 const app = new Vue({
     el: '#app',
     data: {
@@ -8,8 +5,9 @@ const app = new Vue({
         message: '',
         newTodo:'',
         todos: [],
-
-
+        errors:[],
+        errorMessage: '',
+       
     },
     methods: {
         addTodo() {
@@ -18,6 +16,8 @@ const app = new Vue({
                 done:false
             });
             this.newTodo = '';
+            this.message = ''; 
+            
         },
         removeTodo(todo) {
             const todoIndex = this.todos.indexOf(todo);
@@ -29,7 +29,22 @@ const app = new Vue({
                 todo.done = true;
                 this.message = 'Nice! You\'ve got everything done!'; 
             });
-        }
+        },
+
+        checkForm: function (e) {
+            if (this.newTodo === '') {
+                this.errorMessage = 'Oops! You forgot to add a task!';  
+            }
+
+            else {
+                this.addTodo();
+                this.errorMessage = '';
+            }   
+              
+            e.preventDefault();
+          }
     }
 })
+
+
 
