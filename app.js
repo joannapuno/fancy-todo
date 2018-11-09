@@ -16,6 +16,8 @@ const app = new Vue({
                 done:false
             });
             this.newTodo = '';
+            this.message = ''; 
+            
         },
         removeTodo(todo) {
             const todoIndex = this.todos.indexOf(todo);
@@ -36,6 +38,7 @@ const app = new Vue({
 
             else {
                 this.addTodo();
+                this.errorMessage = '';
             }   
               
             e.preventDefault();
