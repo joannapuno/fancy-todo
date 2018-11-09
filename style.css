@@ -1,4 +1,9 @@
 /* General */
+main {
+    position: relative;
+}
+
+
 .wrapper {
     width: 100%;
     margin: 0 auto;
@@ -35,10 +40,9 @@ h1 {
     color: #fff;
 }
 
-.background-graphic {
-    z-index: -100;
-    position: relative;
-    top: 0;
+.background-graphic svg {
+    position: absolute;
+    bottom: 30px;
 }
 
 
