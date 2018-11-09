@@ -35,14 +35,15 @@ li {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 70px;
     text-transform: capitalize;
     color: #fff;
 }
 
 .background-graphic svg {
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
+    z-index: -100;
 }
 
 
@@ -113,11 +114,13 @@ h1 {
 
 .no-note-container {
     position: relative;
+    
 }
 
 .no-note-content {
     position: absolute;
-    top: 115px;
+    top: 120px;
+    
 }
 
 
@@ -125,6 +128,13 @@ h1 {
     color: #fff;
     opacity: 0.5;
 }
+
+
+.no-note-content span {
+    font-size: 13px;
+}
+
+
 
 
 

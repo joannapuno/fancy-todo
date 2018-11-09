@@ -8,8 +8,7 @@ const app = new Vue({
         message: '',
         newTodo:'',
         todos: [],
-
-
+        noNote: true,
     },
     methods: {
         addTodo() {
@@ -32,4 +31,7 @@ const app = new Vue({
         }
     }
 })
+
+
+
 

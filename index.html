@@ -18,7 +18,7 @@
                 <div class="input-content d-flex flex-column ">
                     <form @submit.prevent = "addTodo">
                         <!-- <label for="newTodo">New Todo</label> -->
-                        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" class="todo-input">
+                        <input v-model="newTodo" type="text" name="newTodo" id="newTodo" class="todo-input" placeholder="I need to...">
                         <button class="main-btn" type="submit" name="button">Add</button>
                     </form>
                 </div>
@@ -29,19 +29,21 @@
 
             <div class="list-container">
                 <div class="list-content d-flex flex-column">
-                    <div class="no-note-container d-flex flex-column align-items-center">
-                        <div class="no-note-content d-flex flex-column align-items-center">
-                            <i class="fas fa-sticky-note fa-7x"></i>
-                            <span>Nothing to do today!</span>
-                        </div>
-                    </div>
-                    <ul>
-                        <li v-for="todo in todos">
+                                   
+                    <ul v-if = "todos.length">
+                        <li v-for="todo in todos" >
                             <input type="checkbox" v-model="todo.done">
                             <span :class="{ done: todo.done }">{{ todo.title }}</span>
                             <button @click="removeTodo(todo)" type="button" class="remove-btn" >Remove</button>
                         </li> 
                     </ul>
+                    <div v-else class="no-note-container d-flex flex-column align-items-center" >
+                            <div class="no-note-content d-flex flex-column align-items-center">                
+                                    <i class="fas fa-sticky-note fa-7x"></i>
+                                    <span >Nothing to do today!</span>                              
+                            </div>
+                            <div></div>
+                        </div>  
                 </div>
                 <div class="alldone-btn">
                         <button @click="allDone" type="button" name="button" class="main-btn" >All Done</button>
