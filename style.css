@@ -47,10 +47,6 @@ h1 {
 
 
 
-
-
-
-
 /* Containers */
 .input-container {
     width: 50%;
@@ -111,4 +107,24 @@ h1 {
 .message-text {
     color: #fff;
 }
+
+
+/* No-Note */
+
+.no-note-container {
+    position: relative;
+}
+
+.no-note-content {
+    position: absolute;
+    top: 115px;
+}
+
+
+.no-note-content i, span {
+    color: #fff;
+    opacity: 0.5;
+}
+
+
 
