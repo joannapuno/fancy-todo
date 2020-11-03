@@ -13,7 +13,7 @@ const app = new Vue({
         addTodo() {
             this.todos.push({
                 title:this.newTodo,
-                done:false
+                done:false,
             });
             this.newTodo = '';
             this.message = ''; 
